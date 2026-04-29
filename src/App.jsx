@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import SmoothScroll from './components/SmoothScroll';
 import ErrorBoundary from './components/ErrorBoundary';
 import NotFound from './components/NotFound';
 import Navbar from './components/Navbar';
@@ -9,6 +10,7 @@ import Experience from './components/Experience';
 import Testimonials from './components/Testimonials';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 
 export default function App() {
@@ -29,38 +31,51 @@ export default function App() {
 
   return (
     <ErrorBoundary>
-      <BrowserRouter>
-        <div className="scroll-progress" style={{ width: `${scrollProgress}%` }} />
-        <div className="bg-gradient-mesh" />
-        <div className="geo-shapes">
-          <div className="geo-shape" /><div className="geo-shape" />
-          <div className="geo-shape" /><div className="geo-shape" />
-        </div>
+      <SmoothScroll>
+        <BrowserRouter>
+          <div className="scroll-progress" style={{ width: `${scrollProgress}%` }} />
+          <div className="bg-gradient-mesh" />
+          <div className="geo-shapes">
+            <div className="geo-shape" />
+            <div className="geo-shape" />
+            <div className="geo-shape" />
+            <div className="geo-shape" />
+          </div>
 
-        <Navbar />
-        <main>
-          <Routes>
-            <Route path="/" element={
-              <>
-                <Hero />
-                <About />
-                <Experience />
-                <Testimonials />
-                <Skills />
-                <Projects />
-                <Contact />
-              </>
-            } />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </main>
+          <Navbar />
 
-        <footer style={{ textAlign: 'center', padding: '40px 24px', borderTop: '1px solid var(--border-color)', color: 'var(--text-secondary)', fontSize: '0.85rem' }}>
-          <p>© {new Date().getFullYear()} Port. Dibuat dengan ❤️ & React + Vite. Siap kolaborasi.</p>
-        </footer>
+          <main id="main">
+            <Routes>
+              <Route path="/" element={
+                <>
+                  <Hero />
+                  <About />
+                  <Experience />
+                  <Testimonials />
+                  <Skills />
+                  <Projects />
+                  <FAQ />
+                  <Contact />
+                </>
+              } />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </main>
 
-        <button className={`back-to-top ${showBackToTop ? 'visible' : ''}`} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} aria-label="Back to top">↑</button>
-      </BrowserRouter>
+          <footer style={{ textAlign: 'center', padding: '40px 24px', borderTop: '1px solid var(--border-color)', color: 'var(--text-secondary)', fontSize: '0.85rem' }}>
+            <p>© {new Date().getFullYear()} Ahmad ibrahimovic</p>
+          </footer>
+
+          <button
+            className={`back-to-top ${showBackToTop ? 'visible' : ''}`}
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            aria-label="Back to top"
+            type="button"
+          >
+            ↑
+          </button>
+        </BrowserRouter>
+      </SmoothScroll>
     </ErrorBoundary>
   );
 }

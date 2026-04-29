@@ -1,5 +1,12 @@
 import { useState, useEffect } from 'react';
-import { FiMenu, FiX, FiDownload } from 'react-icons/fi';
+import { FiMenu, FiX, FiDownload, FiExternalLink } from 'react-icons/fi';
+
+// ⚙️ KONFIGURASI CV: Ganti sesuai kebutuhan Anda
+const CV_CONFIG = {
+    type: 'link', // 'link' untuk Canva/Website, 'file' untuk PDF/Gambar lokal
+    url: 'https://canva.link/hvatazegicjeckj', // Link Canva atau '/images/CV.pdf'
+    label: 'Lihat CV'
+};
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
@@ -7,10 +14,9 @@ export default function Navbar() {
     const [activeSection, setActiveSection] = useState('home');
 
     const links = [
+        { label: 'Home', href: '#home' },
         { label: 'About', href: '#about' },
         { label: 'Experience', href: '#experience' },
-        { label: 'Testimonials', href: '#testimonials' },
-        { label: 'Skills', href: '#skills' },
         { label: 'Projects', href: '#projects' },
         { label: 'Contact', href: '#contact' },
     ];
@@ -34,12 +40,25 @@ export default function Navbar() {
         };
     }, []);
 
+    const cvButton = (
+        <a
+            href={CV_CONFIG.url}
+            target={CV_CONFIG.type === 'link' ? '_blank' : '_self'}
+            rel="noopener noreferrer"
+            className="btn-secondary"
+            style={{ padding: '8px 16px', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: 6 }}
+        >
+            {CV_CONFIG.type === 'link' ? <FiExternalLink size={16} /> : <FiDownload size={16} />}
+            {CV_CONFIG.label}
+        </a>
+    );
+
     return (
         <>
             <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
                 <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <a href="#home" style={{ fontFamily: 'Space Grotesk', fontSize: '1.5rem', fontWeight: 700 }}>
-                        Portofolio<span style={{ color: 'var(--accent-primary)' }}>.</span>
+                        Movic-YC<span style={{ color: 'var(--accent-primary)' }}>.</span>
                     </a>
 
                     <div style={{ display: 'flex', alignItems: 'center', gap: 24 }} className="desktop-nav">
@@ -56,9 +75,7 @@ export default function Navbar() {
                                 </a>
                             );
                         })}
-                        <a href="/CV.pdf" download className="btn-secondary" style={{ padding: '8px 16px', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: 6 }}>
-                            <FiDownload size={16} /> CV
-                        </a>
+                        {cvButton}
                         <a href="#contact" className="btn-primary" style={{ padding: '10px 24px', fontSize: '0.85rem' }}>
                             <span>Hire Me</span>
                         </a>
@@ -77,9 +94,7 @@ export default function Navbar() {
                         transform: mobileOpen ? 'translateY(0)' : 'translateY(-20px)', transition: `transform 0.5s var(--ease-out-expo) ${i * 0.1}s`
                     }}>{link.label}</a>
                 ))}
-                <a href="/CV.pdf" download className="btn-secondary" style={{ marginTop: 8, display: 'flex', alignItems: 'center', gap: 8 }} onClick={() => setMobileOpen(false)}>
-                    <FiDownload size={18} /> Download CV
-                </a>
+                <div onClick={() => setMobileOpen(false)}>{cvButton}</div>
             </div>
 
             <style>{` @media (max-width: 900px) { .desktop-nav { display: none !important; } .mobile-toggle { display: flex !important; } } `}</style>

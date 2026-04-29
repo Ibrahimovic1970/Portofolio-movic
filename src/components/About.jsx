@@ -34,7 +34,7 @@ export default function About() {
                     <div style={{ position: 'relative' }}>
                         <div style={{ position: 'absolute', inset: '-15px', borderRadius: '24px', background: 'var(--gradient-main)', filter: 'blur(30px)', transform: 'scale(0.95)' }} />
                         <div style={{ position: 'relative', borderRadius: '24px', overflow: 'hidden', border: '1px solid var(--border-color)', aspectRatio: '4/5', background: 'var(--bg-card)' }}>
-                            <img src="/images/about.jpg" alt="Working Setup" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            <img src="/images/kaisar1.png" alt="Working Setup" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                             <div style={{ position: 'absolute', bottom: '0', left: '0', right: '0', padding: '24px', background: 'linear-gradient(to top, rgba(10,10,15,0.95) 0%, transparent 100%)' }}>
                                 <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', fontStyle: 'italic', margin: 0 }}>"Kode yang baik adalah puisi yang bisa dijalankan mesin."</p>
                             </div>
