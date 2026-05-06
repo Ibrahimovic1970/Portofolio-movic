@@ -1,8 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import SmoothScroll from './components/SmoothScroll';
+import CustomCursor from './components/CustomCursor';
+import CookieConsent from './components/CookieConsenst';
 import ErrorBoundary from './components/ErrorBoundary';
 import NotFound from './components/NotFound';
+import { useAnalytics } from './hooks/useAnalytics';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -14,6 +17,8 @@ import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 
 export default function App() {
+  useAnalytics();
+
   const [scrollProgress, setScrollProgress] = useState(0);
   const [showBackToTop, setShowBackToTop] = useState(false);
 
@@ -32,8 +37,21 @@ export default function App() {
   return (
     <ErrorBoundary>
       <SmoothScroll>
+        <CustomCursor />
         <BrowserRouter>
-          <div className="scroll-progress" style={{ width: `${scrollProgress}%` }} />
+          <div
+            style={{
+              position: 'fixed',
+              top: 0,
+              left: 0,
+              height: '3px',
+              background: 'linear-gradient(90deg, #8b5cf6, #06b6d4)',
+              width: `${scrollProgress}%`,
+              zIndex: 9999,
+              transition: 'width 0.1s linear'
+            }}
+          />
+
           <div className="bg-gradient-mesh" />
           <div className="geo-shapes">
             <div className="geo-shape" />
@@ -46,24 +64,35 @@ export default function App() {
 
           <main id="main">
             <Routes>
-              <Route path="/" element={
-                <>
-                  <Hero />
-                  <About />
-                  <Experience />
-                  <Testimonials />
-                  <Skills />
-                  <Projects />
-                  <FAQ />
-                  <Contact />
-                </>
-              } />
+              <Route
+                path="/"
+                element={
+                  <>
+                    <Hero />
+                    <About />
+                    <Experience />
+                    <Testimonials />
+                    <Skills />
+                    <Projects />
+                    <FAQ />
+                    <Contact />
+                  </>
+                }
+              />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
 
-          <footer style={{ textAlign: 'center', padding: '40px 24px', borderTop: '1px solid var(--border-color)', color: 'var(--text-secondary)', fontSize: '0.85rem' }}>
-            <p>© {new Date().getFullYear()} Ahmad ibrahimovic</p>
+          <footer
+            style={{
+              textAlign: 'center',
+              padding: '40px 24px',
+              borderTop: '1px solid var(--border-color)',
+              color: 'var(--text-secondary)',
+              fontSize: '0.85rem'
+            }}
+          >
+            <p>© {new Date().getFullYear()} Ahmad Ibrahim. Dibuat dengan ❤️ & React + Vite.</p>
           </footer>
 
           <button
@@ -71,9 +100,32 @@ export default function App() {
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             aria-label="Back to top"
             type="button"
+            style={{
+              position: 'fixed',
+              bottom: '30px',
+              right: '30px',
+              width: '48px',
+              height: '48px',
+              borderRadius: '50%',
+              background: 'var(--accent-primary)',
+              border: 'none',
+              color: '#fff',
+              cursor: 'pointer',
+              zIndex: 999,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              fontSize: '1.2rem',
+              fontWeight: '600',
+              transform: showBackToTop ? 'translateY(0)' : 'translateY(100px)',
+              transition: 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+              boxShadow: showBackToTop ? '0 8px 24px rgba(139, 92, 246, 0.4)' : 'none'
+            }}
           >
             ↑
           </button>
+
+          <CookieConsent />
         </BrowserRouter>
       </SmoothScroll>
     </ErrorBoundary>

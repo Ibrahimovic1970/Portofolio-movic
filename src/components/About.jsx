@@ -3,8 +3,8 @@ import { FiHeart, FiTarget, FiStar, FiCoffee } from 'react-icons/fi';
 
 const values = [
     { icon: FiTarget, title: 'Fokus pada Hasil', desc: 'Saya tidak hanya menulis kode, saya memastikan produk Anda mencapai tujuan bisnis.' },
-    { icon: FiStar, title: 'Solusi Kreatif', desc: 'Masalah kompleks butuh pendekatan unik. Saya selalu cari cara terbaik, bukan cara termudah dan juga cara cepat tapi juga membuat website yang berbeda dari yang lain.' },
-    { icon: FiHeart, title: 'User First', desc: 'Setiap interaksi dirancang untuk kenyamanan pengguna. Teknologi adalah alat, manusia adalah fokus. Jadi walaupun saya vibes ngoding, tapi saya tahu cara kerja alur logika dari coding itu sendiri.' },
+    { icon: FiStar, title: 'Solusi Kreatif', desc: 'Masalah kompleks butuh pendekatan unik. Saya selalu cari cara terbaik, bukan cara termudah.' },
+    { icon: FiHeart, title: 'User First', desc: 'Setiap interaksi dirancang untuk kenyamanan pengguna. Teknologi adalah alat, manusia adalah fokus.' },
     { icon: FiCoffee, title: 'Komunikasi Jelas', desc: 'Update rutin, transparansi progress, dan diskusi terbuka adalah kunci kolaborasi sukses.' }
 ];
 
@@ -20,7 +20,7 @@ export default function About() {
                 <div ref={headerRef} className="reveal-up" style={{ textAlign: 'center', marginBottom: '64px' }}>
                     <div className="section-label">
                         <span style={{ width: '24px', height: '2px', background: 'var(--accent-secondary)', display: 'inline-block' }} />
-                        Tentang Saya
+                        TENTANG SAYA
                     </div>
                     <h2 className="section-title" style={{ marginBottom: '16px' }}>
                         Lebih dari Sekadar <span className="gradient-text">Developer</span>
@@ -34,7 +34,7 @@ export default function About() {
                     <div style={{ position: 'relative' }}>
                         <div style={{ position: 'absolute', inset: '-15px', borderRadius: '24px', background: 'var(--gradient-main)', filter: 'blur(30px)', transform: 'scale(0.95)' }} />
                         <div style={{ position: 'relative', borderRadius: '24px', overflow: 'hidden', border: '1px solid var(--border-color)', aspectRatio: '4/5', background: 'var(--bg-card)' }}>
-                            <img src="/images/kaisar1.png" alt="Working Setup" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            <img src="/images/about.jpg" alt="Working Setup" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                             <div style={{ position: 'absolute', bottom: '0', left: '0', right: '0', padding: '24px', background: 'linear-gradient(to top, rgba(10,10,15,0.95) 0%, transparent 100%)' }}>
                                 <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', fontStyle: 'italic', margin: 0 }}>"Kode yang baik adalah puisi yang bisa dijalankan mesin."</p>
                             </div>
@@ -42,16 +42,16 @@ export default function About() {
                     </div>
 
                     <div>
-                        <h3 style={{ fontSize: '1.8rem', fontWeight: '700', fontFamily: 'Space Grotesk, sans-serif', marginBottom: '20px' }}>Tentang Saya & Perjalanan  </h3>
+                        <h3 style={{ fontSize: '1.8rem', fontWeight: '700', fontFamily: 'Space Grotesk, sans-serif', marginBottom: '20px' }}>Perjalanan & Filosofi Kerja</h3>
                         <div style={{ color: 'var(--text-secondary)', lineHeight: '1.8', marginBottom: '32px' }}>
                             <p style={{ marginBottom: '16px' }}>
-                                Saya memulai menjadi vibes ngoding sejak 2024. Awalnya saya hanya iseng untuk belajar coding, tapi lama-kelamaan saya menjadi seorang vibes ngoding. Walaupun saya vibes ngoding, tapi saya paham alur logika dari coding itu sendiri.
+                                Saya memulai perjalanan di dunia web development sejak 2021, bermula dari rasa penasaran bagaimana website bisa terasa "hidup". Dari sana, saya mendalami React, sistem desain, dan optimasi performa hingga bisa membantu berbagai startup & UMKM membangun kehadiran digital yang profesional.
                             </p>
                             <p style={{ marginBottom: '16px' }}>
-                                Bagi saya, coding bukan hanya soal logika dan hasil yang puas, tapi juga tentang proses kreatif yang menyenangkan. Saya suka tantangan baru, dan setiap bug adalah kesempatan untuk belajar sesuatu yang baru. Saya percaya bahwa dengan pendekatan yang tepat, kita bisa membuat teknologi yang tidak hanya berfungsi dengan baik, tetapi juga menyenangkan untuk digunakan.
+                                Bagi saya, development bukan sekadar menulis sintaks. Ini tentang memahami masalah bisnis, menerjemahkannya ke dalam antarmuka yang intuitif, dan memastikan pengalaman pengguna tetap mulus di semua perangkat. Saya bekerja dengan disiplin, transparan, dan selalu mengutamakan kualitas jangka panjang.
                             </p>
                             <p>
-                                Saat tidak coding, saya biasanya mengeksplorasi berbagai frontend, membaca tentang product psychology, atau menikmati kopi sambil debugging masalah yang "mustahil" ternyata cuma typo. ☕
+                                Saat tidak coding, saya biasanya mengeksplorasi UI trends, membaca tentang product psychology, atau menikmati kopi sambil debugging masalah yang "mustahil" ternyata cuma typo. ☕
                             </p>
                         </div>
 
@@ -72,8 +72,6 @@ export default function About() {
                     </div>
                 </div>
             </div>
-
-            <style>{` @media (max-width: 900px) { .container > div:last-child { grid-template-columns: 1fr !important; } } `}</style>
         </section>
     );
 }

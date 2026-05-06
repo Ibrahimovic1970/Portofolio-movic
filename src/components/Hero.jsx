@@ -3,17 +3,16 @@ import useReveal from '../hooks/useReveal';
 import { FiArrowDown, FiCode, FiGlobe, FiZap } from 'react-icons/fi';
 
 const typingTexts = [
-    'Jaringan MikroTik',
-    'Vibes Ngoding',
+    'Frontend Developer',
+    'IT Support',
     'Problem Solver',
-    'Frontend Junior',
-    'IT Consultant',
+    'Networking'
 ];
 
 const stats = [
-    { icon: FiCode, value: '50+', label: 'Proyek Selesai' },
-    { icon: FiGlobe, value: '3+', label: 'Tahun Pengalaman' },
-    { icon: FiZap, value: '99%', label: 'Client Puas' },
+    { icon: FiCode, value: '5+', label: 'Proyek Selesai' },
+    { icon: FiGlobe, value: '1+', label: 'Tahun Pengalaman' },
+    { icon: FiZap, value: '99%', label: 'percaya diri' },
 ];
 
 export default function Hero() {
@@ -26,7 +25,7 @@ export default function Hero() {
             <div style={{ position: 'absolute', bottom: '5%', left: '10%', width: '350px', height: '350px', background: 'radial-gradient(circle, rgba(6,182,212,0.1) 0%, transparent 70%)', borderRadius: '50%', filter: 'blur(80px)', pointerEvents: 'none' }} />
 
             <div className="container" style={{ position: 'relative', zIndex: 1, maxWidth: '1200px', margin: '0 auto', padding: '0 24px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }}>
-                <div ref={mainRef} className="reveal-left" style={{ maxWidth: '640px' }}>
+                <div ref={mainRef} className="reveal-up" style={{ maxWidth: '640px' }}>
                     <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 16px', background: 'rgba(6,182,212,0.1)', border: '1px solid rgba(6,182,212,0.2)', borderRadius: '999px', marginBottom: '24px', fontSize: '0.85rem', color: 'var(--accent-secondary)' }}>
                         <span className="pulse-dot" />
                         Available for freelance work
@@ -40,7 +39,7 @@ export default function Hero() {
                     </h1>
 
                     <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', maxWidth: '520px', marginBottom: '36px', lineHeight: '1.8' }}>
-                        Saya membuat website yang tidak hanya menarik secara visual, tetapi juga cepat, responsif, dan mudah digunakan. Dengan pengalaman dalam React. Saya siap membantu Anda membangun kehadiran digital yang profesional dan efektif.
+                        Saya membuat website yang tidak hanya menarik secara visual, tetapi juga memberikan pengalaman pengguna yang mulus dan intuitif. 
                     </p>
 
                     <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', marginBottom: '48px' }}>
@@ -66,7 +65,7 @@ export default function Hero() {
                     </div>
                 </div>
 
-                <div className="reveal-right" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative' }}>
+                <div className="reveal-up" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative' }}>
                     <div style={{ position: 'relative', width: '100%', maxWidth: '420px', aspectRatio: '1/1' }}>
                         <div style={{ position: 'absolute', inset: '-10px', borderRadius: '50%', background: 'var(--gradient-main)', filter: 'blur(40px)', transform: 'scale(0.9)' }} />
                         <div style={{ position: 'relative', width: '100%', height: '100%', borderRadius: '50%', overflow: 'hidden', border: '2px solid var(--border-color)', background: 'var(--bg-card)' }}>
@@ -84,8 +83,6 @@ export default function Hero() {
                 <FiArrowDown size={20} />
                 <span>Scroll</span>
             </a>
-
-            <style>{` @media (max-width: 900px) { .container { grid-template-columns: 1fr !important; text-align: center; } .container > div:first-child { order: 2; margin: 0 auto; } .container > div:last-child { order: 1; } } `}</style>
         </section>
     );
 }

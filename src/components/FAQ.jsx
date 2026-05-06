@@ -11,12 +11,17 @@ const faqs = [
     {
         icon: FiDollarSign,
         question: 'Bagaimana sistem pembayaran?',
-        answer: 'Saya menggunakan sistem termin: 50% di awal sebagai DP untuk memulai proyek, 50% setelah proyek selesai dan disetujui. Untuk proyek besar (>20jt), bisa dibagi 3 termin. Pembayaran bisa via transfer bank, e-wallet, QR Code, dan paypal.'
+        answer: 'Saya menggunakan sistem termin: 50% di awal sebagai DP untuk memulai proyek, 50% setelah proyek selesai dan disetujui. Untuk proyek besar (>20jt), bisa dibagi 3 termin. Pembayaran via transfer bank atau PayPal.'
     },
     {
         icon: FiShield,
         question: 'Apakah ada garansi maintenance?',
         answer: 'Ya! Semua paket termasuk free maintenance 30 hari setelah launch untuk bug fixing dan minor adjustments. Setelah itu, tersedia paket maintenance bulanan (optional) mulai dari 500rb/bulan untuk update konten, security patch, dan backup rutin.'
+    },
+    {
+        icon: FiCode,
+        question: 'Apakah saya bisa update konten sendiri?',
+        answer: 'Tentu! Saya bisa integrasikan CMS seperti Sanity, Strapi, atau WordPress headless sehingga Anda bisa update konten dengan mudah tanpa coding. Atau jika prefer static site, saya akan dokumentasikan cara editnya.'
     },
     {
         question: 'Apakah website akan mobile-friendly?',
@@ -44,9 +49,7 @@ export default function FAQ() {
                         <span style={{ width: '24px', height: '1px', background: 'var(--accent-tertiary)', display: 'inline-block' }} />
                         FAQ
                     </div>
-                    <h2 className="section-title">
-                        Pertanyaan yang <span className="gradient-text">Sering Diajukan</span>
-                    </h2>
+                    <h2 className="section-title">Pertanyaan yang <span className="gradient-text">Sering Diajukan</span></h2>
                 </div>
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 16, marginBottom: 64 }}>
@@ -119,7 +122,7 @@ export default function FAQ() {
                     })}
                 </div>
 
-                {/* CTA Spesifik */}
+                {/* CTA Section */}
                 <div className="reveal-up" style={{
                     padding: '48px 40px',
                     background: 'var(--gradient-main)',
@@ -128,7 +131,7 @@ export default function FAQ() {
                     position: 'relative',
                     overflow: 'hidden'
                 }}>
-                    <div style={{ position: 'absolute', inset: 0, background: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")', opacity: 0.3 }} />
+                    <div style={{ position: 'absolute', inset: 0, opacity: 0.3, backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.05\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }} />
 
                     <div style={{ position: 'relative', zIndex: 1 }}>
                         <h3 style={{ fontSize: '1.8rem', fontWeight: 700, color: '#fff', marginBottom: 12 }}>
@@ -140,9 +143,7 @@ export default function FAQ() {
 
                         <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
                             <a
-                                href="https://calendly.com/yourusername/15min"
-                                target="_blank"
-                                rel="noopener noreferrer"
+                                href="#contact"
                                 style={{
                                     display: 'inline-flex',
                                     alignItems: 'center',
@@ -202,7 +203,7 @@ export default function FAQ() {
                         </div>
 
                         <p style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.8)', marginTop: 24 }}>
-                            ⚡ Response time: 2-4 jam di jam kerja | 💬 WhatsApp/Email/Instagram
+                            ⚡ Response time: 2-4 jam di jam kerja | 💬 WhatsApp/Email/Telegram
                         </p>
                     </div>
                 </div>

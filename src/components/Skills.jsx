@@ -6,19 +6,19 @@ const categories = [
         title: 'Frontend',
         icon: FiLayout,
         color: 'var(--accent-primary)',
-        skills: ['React', 'Vite', 'Next.js']
+        skills: ['React', 'Vite', 'JavaScript', 'Laravel', 'bootstrap']
     },
     {
         title: 'Backend & Tools',
         icon: FiServer,
         color: 'var(--accent-secondary)',
-        skills: ['Node.js', 'Express', 'PostgreSQL', 'Prisma', 'REST API', 'Git', 'Docker']
+        skills: ['Express.js', 'MySQL', 'Git', 'GitHub']
     },
     {
         title: 'Design & Workflow',
         icon: FiPenTool,
         color: 'var(--accent-tertiary)',
-        skills: ['Figma', 'Responsive Design', 'Accessibility (WCAG)', 'Agile/Scrum', 'CI/CD', 'Performance Audit']
+        skills: ['Canva']
     }
 ];
 
@@ -34,12 +34,8 @@ export default function Skills() {
                         <span style={{ width: '24px', height: '2px', background: 'var(--accent-tertiary)', display: 'inline-block' }} />
                         Keahlian
                     </div>
-                    <h2 className="section-title">
-                        Tech Stack & <span className="gradient-text">Workflow</span>
-                    </h2>
-                    <p className="section-desc">
-                        Kombinasi teknologi modern & disiplin kerja yang saya gunakan untuk menghasilkan produk berkualitas.
-                    </p>
+                    <h2 className="section-title">Tech Stack & <span className="gradient-text">Workflow</span></h2>
+                    <p className="section-desc">Kombinasi teknologi modern & disiplin kerja yang saya gunakan untuk menghasilkan produk berkualitas.</p>
                 </div>
 
                 <div ref={gridRef} className="stagger-container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '24px' }}>

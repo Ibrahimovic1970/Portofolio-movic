@@ -1,18 +1,70 @@
 {
-    "name": "Portfolio | Web Developer",
-    "short_name": "Portfolio",
-    "description": "Professional Web Developer & UI Designer Portfolio",
+    "name": "Ahmad Ibrahim - Web Developer & UI Designer",
+    "short_name": "Portfolio AI",
+    "description": "Portfolio profesional Ahmad Ibrahim. Web Developer & UI Designer yang membangun pengalaman digital elegan & berperforma.",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#0a0a0f",
     "theme_color": "#0a0a0f",
     "orientation": "portrait-primary",
+    "lang": "id",
+    "categories": [
+        "business",
+        "productivity",
+        "utilities"
+    ],
     "icons": [
         {
-            "src": "/favicon.svg",
-            "sizes": "any",
-            "type": "image/svg+xml",
+            "src": "/favicon-96x96.png",
+            "sizes": "96x96",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png",
+            "purpose": "apple-touch-icon"
+        },
+        {
+            "src": "/pwa-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/pwa-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
             "purpose": "any maskable"
         }
-    ]
+    ],
+    "shortcuts": [
+        {
+            "name": "Lihat Projects",
+            "short_name": "Projects",
+            "description": "Lihat portfolio proyek terbaru",
+            "url": "/#projects",
+            "icons": [
+                {
+                    "src": "/pwa-192x192.png",
+                    "sizes": "192x192"
+                }
+            ]
+        },
+        {
+            "name": "Hubungi Saya",
+            "short_name": "Contact",
+            "description": "Kirim pesan untuk kolaborasi",
+            "url": "/#contact",
+            "icons": [
+                {
+                    "src": "/pwa-192x192.png",
+                    "sizes": "192x192"
+                }
+            ]
+        }
+    ],
+    "related_applications": [],
+    "prefer_related_applications": false
 }

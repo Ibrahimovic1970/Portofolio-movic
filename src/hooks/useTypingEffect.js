@@ -1,11 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 
-export function useTypingEffect(
-    texts,
-    typingSpeed = 80,
-    deletingSpeed = 40,
-    pauseDuration = 1200
-) {
+export function useTypingEffect(texts, typingSpeed = 75, deletingSpeed = 35, pauseDuration = 1200) {
     const [index, setIndex] = useState(0);
     const [charIndex, setCharIndex] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
@@ -13,7 +8,6 @@ export function useTypingEffect(
 
     useEffect(() => {
         const currentFullText = texts[index % texts.length] ?? '';
-
         const handleTimeout = () => {
             if (!isDeleting) {
                 if (charIndex < currentFullText.length) {
@@ -32,9 +26,7 @@ export function useTypingEffect(
                 }
             }
         };
-
         timeoutRef.current = setTimeout(handleTimeout, isDeleting ? deletingSpeed : typingSpeed);
-
         return () => clearTimeout(timeoutRef.current);
     }, [charIndex, isDeleting, index, texts, typingSpeed, deletingSpeed, pauseDuration]);
 

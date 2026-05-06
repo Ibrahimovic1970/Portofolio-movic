@@ -3,15 +3,16 @@ import { FiMessageSquare } from 'react-icons/fi';
 
 const testimonials = [
     {
-        name: 'Muhammad Dzikri',
-        role: 'Programming, Mempelajari Bahasa Jepang',
-        quote: 'Teman saya satu ini selalu bisa diandalkan walaupun dia vibes ngoding, tapi bakat dalam membuat website jangan di tanya',
-        img: '/images/Dzikri.jpg'
+        name: 'Budi Santoso',
+        role: 'CEO, TechStart ID',
+        quote: 'Hasil kerjanya melebihi ekspektasi. Website kami jadi 3x lebih cepat dan konversi naik signifikan. Sangat profesional!',
+        img: '/images/client1.jpg'
     },
 ];
 
 export default function Testimonials() {
     const ref = useReveal(0.1);
+
     return (
         <section id="testimonials" style={{ padding: '120px 0', background: 'var(--bg-primary)' }}>
             <div className="container" style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
@@ -21,7 +22,7 @@ export default function Testimonials() {
                         Testimoni
                     </div>
                     <h2 className="section-title">Apa Kata <span className="gradient-text">Mereka</span></h2>
-                    <p className="section-desc">Feedback langsung dari teman.</p>
+                    <p className="section-desc">Feedback langsung dari klien yang telah berkolaborasi.</p>
                 </div>
 
                 <div className="stagger-container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '24px' }}>
@@ -33,8 +34,8 @@ export default function Testimonials() {
                                 <img
                                     src={t.img}
                                     alt={t.name}
-                                    style={{ width: '48px', height: '48px', borderRadius: '50%', objectFit: 'cover', border: '2px solid var(--border-color)' }}
                                     onError={(e) => { e.target.src = 'https://ui-avatars.com/api/?name=' + encodeURIComponent(t.name) + '&background=8b5cf6&color=fff'; }}
+                                    style={{ width: '48px', height: '48px', borderRadius: '50%', objectFit: 'cover', border: '2px solid var(--border-color)' }}
                                 />
                                 <div>
                                     <h4 style={{ fontSize: '1rem', fontWeight: '600' }}>{t.name}</h4>
