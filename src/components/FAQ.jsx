@@ -6,30 +6,15 @@ const faqs = [
     {
         icon: FiCalendar,
         question: 'Berapa lama waktu pengerjaan website?',
-        answer: 'Tergantung kompleksitas proyek. Untuk landing page sederhana: 3-5 hari. Website company profile: 1-2 minggu. E-commerce/dashboard custom: 2-4 minggu. Saya selalu berikan timeline detail di awal sebelum proyek dimulai.'
-    },
-    {
-        icon: FiDollarSign,
-        question: 'Bagaimana sistem pembayaran?',
-        answer: 'Saya menggunakan sistem termin: 50% di awal sebagai DP untuk memulai proyek, 50% setelah proyek selesai dan disetujui. Untuk proyek besar (>20jt), bisa dibagi 3 termin. Pembayaran via transfer bank atau PayPal.'
-    },
-    {
-        icon: FiShield,
-        question: 'Apakah ada garansi maintenance?',
-        answer: 'Ya! Semua paket termasuk free maintenance 30 hari setelah launch untuk bug fixing dan minor adjustments. Setelah itu, tersedia paket maintenance bulanan (optional) mulai dari 500rb/bulan untuk update konten, security patch, dan backup rutin.'
-    },
-    {
-        icon: FiCode,
-        question: 'Apakah saya bisa update konten sendiri?',
-        answer: 'Tentu! Saya bisa integrasikan CMS seperti Sanity, Strapi, atau WordPress headless sehingga Anda bisa update konten dengan mudah tanpa coding. Atau jika prefer static site, saya akan dokumentasikan cara editnya.'
+        answer: 'Tergantung kompleksitas proyek.'
     },
     {
         question: 'Apakah website akan mobile-friendly?',
-        answer: '100% responsive! Semua website yang saya bangun menggunakan mobile-first approach dan ditest di berbagai device (iPhone, Android, tablet) untuk memastikan tampilan sempurna di semua ukuran layar.'
+        answer: 'Saya akan mengusahakan website yang awalnya cuma buat website desktop, akan saya buat juga versi mobile-nya, jadi website kamu tetap terlihat bagus di semua perangkat.'
     },
     {
         question: 'Bagaimana proses komunikasinya?',
-        answer: 'Saya update progress via WhatsApp/Email minimal 2x seminggu. Kita juga bisa scheduled call via Google Meet untuk diskusi detail. Saya responsif (biasanya reply dalam 2-4 jam di jam kerja).'
+        answer: 'Saya update progress via WhatsApp/Email, jika ingin diskusi lebih mendalam, kita bisa atur meeting via Zoom/Google Meet.'
     }
 ];
 

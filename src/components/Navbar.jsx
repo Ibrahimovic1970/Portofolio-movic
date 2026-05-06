@@ -14,6 +14,7 @@ export default function Navbar() {
         { label: 'About', href: '#about' },
         { label: 'Experience', href: '#experience' },
         { label: 'Skills', href: '#skills' },
+        { label: 'GalleryCertificates', href: '#gallery-certificates' },
         { label: 'Projects', href: '#projects' },
         { label: 'Contact', href: '#contact' },
     ];
@@ -53,7 +54,7 @@ export default function Navbar() {
             <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
                 <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <a href="#home" style={{ fontFamily: 'Space Grotesk', fontSize: '1.5rem', fontWeight: 700 }}>
-                        Port<span style={{ color: 'var(--accent-primary)' }}>.</span>
+                        Port-movic<span style={{ color: 'var(--accent-primary)' }}>.</span>
                     </a>
 
                     <div style={{ display: 'flex', alignItems: 'center', gap: 20 }} className="desktop-nav">

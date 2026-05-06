@@ -45,10 +45,10 @@ export default function About() {
                         <h3 style={{ fontSize: '1.8rem', fontWeight: '700', fontFamily: 'Space Grotesk, sans-serif', marginBottom: '20px' }}>Perjalanan & Filosofi Kerja</h3>
                         <div style={{ color: 'var(--text-secondary)', lineHeight: '1.8', marginBottom: '32px' }}>
                             <p style={{ marginBottom: '16px' }}>
-                                Saya memulai perjalanan di dunia web development sejak 2021, bermula dari rasa penasaran bagaimana website bisa terasa "hidup". Dari sana, saya mendalami React, sistem desain, dan optimasi performa hingga bisa membantu berbagai startup & UMKM membangun kehadiran digital yang profesional.
+                                Saya mulai tertarik terhadap frontend di tahun 2024, sejak saat itu saya membuat berbagai tampilan website. Saya adalah seorang frontend vibes ngoding, walaupun saya vibes ngoding, tapi saya tetap paham cara kerja alur dari codingan saya.
                             </p>
                             <p style={{ marginBottom: '16px' }}>
-                                Bagi saya, development bukan sekadar menulis sintaks. Ini tentang memahami masalah bisnis, menerjemahkannya ke dalam antarmuka yang intuitif, dan memastikan pengalaman pengguna tetap mulus di semua perangkat. Saya bekerja dengan disiplin, transparan, dan selalu mengutamakan kualitas jangka panjang.
+                                Bagi saya tidak masalah kita menjadi vibes ngoding, yang penting kita paham alur dari codingan kita, karena dengan memahami alur dari codingan kita, kita bisa memperbaiki codingan kita dengan mudah, dan kita juga bisa membuat codingan yang lebih baik lagi.
                             </p>
                             <p>
                                 Saat tidak coding, saya biasanya mengeksplorasi UI trends, membaca tentang product psychology, atau menikmati kopi sambil debugging masalah yang "mustahil" ternyata cuma typo. ☕
