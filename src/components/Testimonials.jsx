@@ -3,10 +3,10 @@ import { FiMessageSquare } from 'react-icons/fi';
 
 const testimonials = [
     {
-        name: 'Budi Santoso',
-        role: 'CEO, TechStart ID',
-        quote: 'Hasil kerjanya melebihi ekspektasi. Website kami jadi 3x lebih cepat dan konversi naik signifikan. Sangat profesional!',
-        img: '/images/client1.jpg'
+        name: 'Muhammad Dzikri',
+        role: 'Teman',
+        quote: 'Ahmad Ibrahimovic adalah teman yang inisiatif dan selalu siap membantu. Dia memiliki semangat belajar yang tinggi dan selalu berusaha untuk berkembang.',
+        img: 'public/images/Dzikri.jpg'
     },
 ];
 

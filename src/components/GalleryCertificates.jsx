@@ -3,21 +3,15 @@ import useReveal from '../hooks/useReveal';
 
 // Ganti src gambar dengan file asli Anda di public/images/
 const galleryItems = [
-    { id: 1, title: 'Setup Workspace', img: '/images/gallery1.jpg' },
-    { id: 2, title: 'Team Collaboration', img: '/images/gallery2.jpg' },
-    { id: 3, title: 'Hackathon Event', img: '/images/gallery3.jpg' },
-    { id: 4, title: 'Coding Session', img: '/images/gallery4.jpg' },
-    { id: 5, title: 'Client Meeting', img: '/images/gallery5.jpg' },
-    { id: 6, title: 'Workshop IT', img: '/images/gallery6.jpg' }
+    { id: 1, title: 'Outing', img: 'public/images/outing-bandung.jpg' },
+    { id: 2, title: 'You Amazing', img: 'public/images/you-amazing.jpg' },
 ];
 
 const certificates = [
-    { id: 1, title: 'Frontend Development', issuer: 'Dicoding Indonesia', date: '2024', img: '/images/cert1.jpg' },
-    { id: 2, title: 'Networking & Security', issuer: 'Cisco Networking Academy', date: '2023', img: '/images/cert2.jpg' },
-    { id: 3, title: 'UI/UX Design Fundamentals', issuer: 'Coursera', date: '2024', img: '/images/cert3.jpg' },
-    { id: 4, title: 'IT Support Specialist', issuer: 'Google Career Certificates', date: '2023', img: '/images/cert4.jpg' },
-    { id: 5, title: 'Web Development Bootcamp', issuer: 'SMK TI BAZMA', date: '2024', img: '/images/cert5.jpg' },
-    { id: 6, title: 'Database Management', issuer: 'Oracle Academy', date: '2023', img: '/images/cert6.jpg' }
+    { id: 1, title: 'Cryptography', issuer: 'Cyberacademy', date: '2024', img: 'public/images/sertifikat_cryptography_dasar.jpg' },
+    { id: 2, title: 'Pengenalan dasar cyber', issuer: 'Cyberacademy', date: '2024', img: 'public/images/Sertifikat_pengenalan_dasar_cyber.jpg' },
+    { id: 3, title: 'Bootcamp Cyber security', issuer: 'Binus', date: '2024', img: 'public/images/binus-cybersecurity.png' },
+    
 ];
 
 export default function GalleryCertificates() {
@@ -35,7 +29,7 @@ export default function GalleryCertificates() {
                         GALERI & SERTIFIKAT
                     </div>
                     <h2 className="section-title">Dokumentasi & <span className="gradient-text">Pencapaian</span></h2>
-                    <p className="section-desc">Beberapa momen perjalanan dan bukti kompetensi yang telah saya raih.</p>
+                    <p className="section-desc">Beberapa Foto yang saya ambil dari kegiatan saya</p>
                 </div>
 
                 {/* Tabs */}

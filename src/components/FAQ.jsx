@@ -188,7 +188,7 @@ export default function FAQ() {
                         </div>
 
                         <p style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.8)', marginTop: 24 }}>
-                            ⚡ Response time: 2-4 jam di jam kerja | 💬 WhatsApp/Email/Telegram
+                            ⚡ Response time: 2-4 jam di jam kerja | 💬 WhatsApp/Email/Telegram/Instagram
                         </p>
                     </div>
                 </div>
