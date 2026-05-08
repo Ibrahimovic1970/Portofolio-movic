@@ -3,14 +3,14 @@ import useReveal from '../hooks/useReveal';
 
 // Ganti src gambar dengan file asli Anda di public/images/
 const galleryItems = [
-    { id: 1, title: 'Outing', img: 'public/images/outing-bandung.jpg' },
-    { id: 2, title: 'You Amazing', img: 'public/images/you-amazing.jpg' },
+    { id: 1, title: 'Outing', img: 'public/images/galeri1.jpg' },
+    { id: 2, title: 'You Amazing', img: 'public/images/galeri.jpg' },
 ];
 
 const certificates = [
-    { id: 1, title: 'Cryptography', issuer: 'Cyberacademy', date: '2024', img: 'public/images/sertifikat_cryptography_dasar.jpg' },
-    { id: 2, title: 'Pengenalan dasar cyber', issuer: 'Cyberacademy', date: '2024', img: 'public/images/Sertifikat_pengenalan_dasar_cyber.jpg' },
-    { id: 3, title: 'Bootcamp Cyber security', issuer: 'Binus', date: '2024', img: 'public/images/binus-cybersecurity.png' },
+    { id: 1, title: 'Cryptography', issuer: 'Cyberacademy', date: '2024', img: 'public/images/certi1.jpg' },
+    { id: 2, title: 'Pengenalan dasar cyber', issuer: 'Cyberacademy', date: '2024', img: 'public/images/certi2.jpg' },
+    { id: 3, title: 'Bootcamp Cyber security', issuer: 'Binus', date: '2024', img: 'public/images/certi.png' },
     
 ];
 
