@@ -1,41 +1,38 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import LoadingScreen from './components/LoadingScreen';
-import SmoothScroll from './components/SmoothScroll';
-import CustomCursor from './components/CustomCursor';
-import WhatsAppChat from './components/WhatssAppPopup';
-import CookieConsent from './components/CookieConsenst';
-import ErrorBoundary from './components/ErrorBoundary';
-import NotFound from './components/NotFound';
-import { useAnalytics } from './hooks/useAnalytics';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Experience from './components/Experience';
-import Testimonials from './components/Testimonials';
-import Skills from './components/Skills';
-import GalleryCertificates from './components/GalleryCertificates';
-import Projects from './components/Projects';
-import FAQ from './components/FAQ';
-import Contact from './components/Contact';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import LoadingScreen from './components/LoadingScreen'
+import SmoothScroll from './components/SmoothScroll'
+import CustomCursor from './components/CustomCursor'
+import WhatssAppPopup from './components/WhatssAppPopup'
+import CookieConsent from './components/CookieConsenst'
+import ErrorBoundary from './components/ErrorBoundary'
+import NotFound from './components/NotFound'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import About from './components/About'
+import Experience from './components/Experience'
+import Testimonials from './components/Testimonials'
+import Skills from './components/Skills'
+import GalleryCertificates from './components/GalleryCertificates'
+import Projects from './components/Projects'
+import FAQ from './components/FAQ'
+import Contact from './components/Contact'
 
 export default function App() {
-  useAnalytics();
-
-  const [scrollProgress, setScrollProgress] = useState(0);
-  const [showBackToTop, setShowBackToTop] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0)
+  const [showBackToTop, setShowBackToTop] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-      setScrollProgress(progress);
-      setShowBackToTop(scrollTop > 500);
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+      const scrollTop = window.scrollY
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight
+      const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0
+      setScrollProgress(progress)
+      setShowBackToTop(scrollTop > 500)
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
     <ErrorBoundary>
@@ -70,34 +67,38 @@ export default function App() {
 
           <main id="main">
             <Routes>
-              <Route path="/" element={
-                <>
-                  <Hero />
-                  <About />
-                  <Experience />
-                  <Testimonials />
-                  <Skills />
-                  <GalleryCertificates />
-                  <Projects />
-                  <FAQ />
-                  <Contact />
-                </>
-              } />
+              <Route
+                path="/"
+                element={
+                  <>
+                    <Hero />
+                    <About />
+                    <Experience />
+                    <Testimonials />
+                    <Skills />
+                    <GalleryCertificates />
+                    <Projects />
+                    <FAQ />
+                    <Contact />
+                  </>
+                }
+              />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
 
-          <footer style={{
-            textAlign: 'center',
-            padding: '40px 24px',
-            borderTop: '1px solid var(--border-color)',
-            color: 'var(--text-secondary)',
-            fontSize: '0.85rem'
-          }}>
-            <p>© {new Date().getFullYear()} Ahmad Ibrahimovic</p>
+          <footer
+            style={{
+              textAlign: 'center',
+              padding: '40px 24px',
+              borderTop: '1px solid var(--border-color)',
+              color: 'var(--text-secondary)',
+              fontSize: '0.85rem'
+            }}
+          >
+            <p>© {new Date().getFullYear()} Ahmad Ibrahimovic.</p>
           </footer>
 
-          {/* Back to Top Button */}
           <button
             className={`back-to-top ${showBackToTop ? 'visible' : ''}`}
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
@@ -128,12 +129,10 @@ export default function App() {
             ↑
           </button>
 
-          {/* WhatsApp Direct Chat Widget */}
-          <WhatsAppChat />
-
+          <WhatssAppPopup />
           <CookieConsent />
         </BrowserRouter>
       </SmoothScroll>
     </ErrorBoundary>
-  );
+  )
 }

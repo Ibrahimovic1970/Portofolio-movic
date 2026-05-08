@@ -11,8 +11,8 @@ const typingTexts = [
 
 const stats = [
     { icon: FiCode, value: '5+', label: 'Proyek Selesai' },
-    { icon: FiGlobe, value: '1+', label: 'Tahun Pengalaman' },
-    { icon: FiZap, value: '99%', label: 'percaya diri' },
+    { icon: FiGlobe, value: '0', label: 'Belum ada Pengalaman' },
+    { icon: FiZap, value: '99%', label: 'percaya Diri' },
 ];
 
 export default function Hero() {

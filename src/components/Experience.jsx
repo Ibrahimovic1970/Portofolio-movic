@@ -7,7 +7,7 @@ const experiences = [
         role: 'IT Support, Networking, dan frontend',
         company: 'SMK TI BAZMA',
         location: 'Bogor, Indonesia',
-        desc: 'Mempelajari dan mengelola tentang jaringan komputer, termasuk konfigurasi router, switch, dan firewall. Mempelajari dasar dari kriptografi'
+        desc: 'Mempelajari dan mengelola tentang jaringan komputer, termasuk konfigurasi router, switch, dan firewall. Mempelajari dasar-dasar tentang kriptografi'
     },
     
 ];

@@ -1,37 +1,29 @@
 {
-  "name": "portfolio-ahmad-ibrahim",
+  "name": "portfolio-movic",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
-    "dev:frontend": "vite",
-    "dev:backend": "node server/server.js",
+    "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "node server/server.js"
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
-    "@studio-freight/lenis": "^1.0.42",
-    "canvas": "^2.11.2",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.1",
-    "express": "^4.18.2",
-    "express-mongo-sanitize": "^2.2.0",
-    "express-rate-limit": "^7.1.5",
-    "helmet": "^7.1.0",
-    "nodemailer": "^6.9.9",
+    "lenis": "^1.3.23",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",
-    "react-router-dom": "^6.22.0",
-    "xss-clean": "^0.1.4"
+    "react-router-dom": "^6.22.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.2.1",
-    "concurrently": "^8.2.2",
-    "vite": "^5.1.4",
-    "vite-plugin-pwa": "^0.19.8",
-    "workbox-window": "^7.0.0"
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.3",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "vite": "^5.4.1"
   }
 }
