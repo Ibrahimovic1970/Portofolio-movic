@@ -1,17 +1,19 @@
 import { useState } from 'react';
 import useReveal from '../hooks/useReveal';
 
-// Ganti src gambar dengan file asli Anda di public/images/
+// ✅ NAMA FILE SUDAH DISAMAKAN PERSIS DENGAN YANG ADA DI FOLDER public/images/ ANDA
 const galleryItems = [
-    { id: 1, title: 'Outing', img: 'public/images/galeri1.jpg' },
-    { id: 2, title: 'You Amazing', img: 'public/images/galeri.jpg' },
+    { id: 1, title: 'You Amazing', img: '/images/galeri.jpg' },
+    { id: 2, title: 'Outing Class', img: '/images/galeri1.jpg' },
+    { id: 3, title: 'Aksa', img: '/images/Aksa.png' },
+    { id: 5, title: 'Cosplay', img: '/images/cosplay.png' },
+    { id: 6, title: 'Detektif', img: '/images/detektif.png' }
 ];
 
 const certificates = [
-    { id: 1, title: 'Cryptography', issuer: 'Cyberacademy', date: '2024', img: 'public/images/certi1.jpg' },
-    { id: 2, title: 'Pengenalan dasar cyber', issuer: 'Cyberacademy', date: '2024', img: 'public/images/certi2.jpg' },
-    { id: 3, title: 'Bootcamp Cyber security', issuer: 'Binus', date: '2024', img: 'public/images/certi.png' },
-    
+    { id: 1, title: 'Sertifikat 1', issuer: 'Binus', date: '2024', img: '/images/certi.png' },
+    { id: 2, title: 'Sertifikat 2', issuer: 'Cyberacademy', date: '2024', img: '/images/certi1.jpg' },
+    { id: 3, title: 'Sertifikat 3', issuer: 'Cyberacademy', date: '2024', img: '/images/certi2.jpg' }
 ];
 
 export default function GalleryCertificates() {
@@ -29,7 +31,7 @@ export default function GalleryCertificates() {
                         GALERI & SERTIFIKAT
                     </div>
                     <h2 className="section-title">Dokumentasi & <span className="gradient-text">Pencapaian</span></h2>
-                    <p className="section-desc">Beberapa Foto yang saya ambil dari kegiatan saya</p>
+                    <p className="section-desc">Beberapa momen perjalanan dan bukti kompetensi yang telah saya raih.</p>
                 </div>
 
                 {/* Tabs */}
@@ -66,12 +68,15 @@ export default function GalleryCertificates() {
                 }}>
                     {items.map((item) => (
                         <div key={item.id} className="stagger-item glass-card" style={{ overflow: 'hidden', position: 'relative' }}>
-                            <div style={{ height: 200, overflow: 'hidden' }}>
+                            <div style={{ height: 200, overflow: 'hidden', background: 'var(--bg-card)' }}>
                                 <img
                                     src={item.img}
                                     alt={item.title}
                                     loading="lazy"
-                                    onError={(e) => { e.target.src = `https://via.placeholder.com/600x400/111118/8b5cf6?text=${encodeURIComponent(item.title)}`; }}
+                                    onError={(e) => {
+                                        console.error(`Gambar tidak ditemukan: ${item.img}`);
+                                        e.target.style.display = 'none';
+                                    }}
                                     style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }}
                                     onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.1)'}
                                     onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
