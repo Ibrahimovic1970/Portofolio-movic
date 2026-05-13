@@ -5,17 +5,18 @@ const projects = [
     {
         title: 'BazmaTools',
         problem: 'Saya berfikir untuk membuat alat bantu untuk mempermudah proses belajar.',
-        solution: 'membuat tools dengan fitur yang akan di butuhkan oleh pelajar, seperti kalkulator, konverter, dan lain-lain.',
+        solution: 'Membuat tools dengan fitur yang akan di butuhkan oleh pelajar, seperti kalkulator, konverter, dan lain-lain.',
         result: '↓ Load time 65% (8s → 2.8s) | ↑ User engagement 40% | 100% Lighthouse score',
         metrics: [
             { icon: FiClock, value: '65%', label: 'Faster Load' },
             { icon: FiTrendingUp, value: '40%', label: 'More Engagement' },
             { icon: FiAward, value: '100', label: 'Lighthouse Score' }
         ],
-        tech: ['React', 'React Query', 'Vite', 'CSS'],
-        image: '/public/images/tools-kit-belajar.png',
-        liveUrl: 'https://web-tools-woad-eight.vercel.app/', 
-        githubUrl: 'https://github.com/Ibrahimovic1970/web-tools' 
+        tech: ['React', 'Recharts', 'Tailwind', 'React Query'],
+        // ✅ GANTI DENGAN GAMBAR YANG ADA DI FOLDER ANDA
+        image: '/images/tools-kit-belajar.png',
+        liveUrl: 'https://web-tools-woad-eight.vercel.app/',
+        githubUrl: 'https://github.com/Ibrahimovic1970/web-tools'
     },
     {
         title: 'Website Bantu-Sosial',
@@ -23,12 +24,13 @@ const projects = [
         solution: 'Membangun website yang memudahkan organisasi sosial dalam menggalang dukungan dan donasi melalui fitur yang intuitif dan menarik.',
         result: '↑ User satisfaction 90% | ↓ Bounce rate 30% | 100% SEO score',
         metrics: [
-            { icon: FiClock, value: '90%', label: 'User Satisfaction' },
-            { icon: FiTrendingUp, value: '30%', label: 'Lower Bounce Rate' },
+            { icon: FiTrendingUp, value: '90%', label: 'User Satisfaction' },
+            { icon: FiClock, value: '30%', label: 'Lower Bounce Rate' },
             { icon: FiAward, value: '100', label: 'SEO Score' }
         ],
-        tech: ['React', 'CSS', 'Vite'],
-        image: '/public/images/aksa.png',
+        tech: ['Vite', 'Stripe', 'Zustand', 'Framer Motion'],
+        // ✅ INI MASIH PAKAI GALERI.JPG SEBAGAI CONTOH (Ganti jika punya screenshot khusus)
+        image: '/images/Aksa.png',
         liveUrl: 'https://website-aksa.vercel.app/',
         githubUrl: 'https://github.com/Ibrahimovic1970/website-aksa'
     }
@@ -73,16 +75,19 @@ export default function Projects() {
                             }}
                         >
                             {/* Gambar Project dengan Overlay Klik */}
-                            <div className="project-image-wrapper" style={{ height: 240, overflow: 'hidden', position: 'relative' }}>
+                            <div className="project-image-wrapper" style={{ height: 240, overflow: 'hidden', position: 'relative', background: '#111' }}>
                                 <img
                                     src={project.image}
                                     alt={project.title}
                                     loading="lazy"
-                                    onError={(e) => { e.target.src = 'https://via.placeholder.com/800x600/111118/8b5cf6?text=' + encodeURIComponent(project.title); }}
+                                    onError={(e) => {
+                                        // Fallback jika gambar tidak ada
+                                        e.target.style.display = 'none';
+                                    }}
                                     style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.6s ease' }}
                                 />
 
-                                {/* Overlay Hover: Muncul saat mouse diarahkan */}
+                                {/* Overlay Hover */}
                                 <div style={{
                                     position: 'absolute', inset: 0,
                                     background: 'rgba(10,10,15,0.7)',
@@ -151,12 +156,11 @@ export default function Projects() {
                                         </span>
                                     ))}
 
-                                    {/* Tombol Tambahan di dalam card */}
                                     <a
                                         href={project.githubUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        onClick={(e) => e.stopPropagation()} // Mencegah klik github menutup link utama
+                                        onClick={(e) => e.stopPropagation()}
                                         style={{
                                             marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 6,
                                             fontSize: '0.85rem', color: 'var(--text-secondary)', fontWeight: 500,
