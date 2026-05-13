@@ -6,8 +6,7 @@ const galleryItems = [
     { id: 1, title: 'You Amazing', img: '/images/galeri.jpg' },
     { id: 2, title: 'Outing Class', img: '/images/galeri1.jpg' },
     { id: 3, title: 'Aksa', img: '/images/Aksa.png' },
-    { id: 5, title: 'Cosplay', img: '/images/cosplay.png' },
-    { id: 6, title: 'Detektif', img: '/images/detektif.png' }
+    { id: 4, title: 'Web Tools', img: '/images/tools-kit-belajar.png' },
 ];
 
 const certificates = [

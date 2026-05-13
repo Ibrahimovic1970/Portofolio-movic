@@ -10,7 +10,7 @@ const typingTexts = [
 ];
 
 const stats = [
-    { icon: FiCode, value: '5+', label: 'Proyek Selesai' },
+    { icon: FiCode, value: '3+', label: 'Proyek Selesai' },
     { icon: FiGlobe, value: '0', label: 'Belum ada Pengalaman' },
     { icon: FiZap, value: '99%', label: 'percaya Diri' },
 ];
